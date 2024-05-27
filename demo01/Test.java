@@ -150,5 +150,7 @@ public class Test {
 //        ns[1] = "abc";
 //        System.out.println(s);
 
+        System.out.printf("%d %.2f", 100, 3.14156);
+
     }
 }
