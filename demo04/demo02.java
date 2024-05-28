@@ -16,7 +16,7 @@ public class demo01 {
 //
 //        System.out.println(str1.equalsIgnoreCase(str3));
 
-        String str = " suhua is a good boy! \n";
+        String str = " suhua is a good boy!";
         System.out.println(str.contains("!"));
 
         System.out.println(str.indexOf("!"));
@@ -33,5 +33,10 @@ public class demo01 {
         System.out.println(" \n ".isBlank());
 
         System.out.println(str.replace("suhua", "baidu"));
+
+        System.out.println("suhua is a good boy".split(" "));
+        for (String a : "suhua-is-a-good".split("-")) {
+            System.out.println(a);
+        }
     }
 }
