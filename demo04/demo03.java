@@ -12,24 +12,37 @@ public class demo03 {
 //            System.out.println(arr[i]);
 //        }
 
-        String[] arr = {"A", "B", "C"};
-        System.out.println(String.join(",", arr));
+//        String[] arr = {"A", "B", "C"};
+//        System.out.println(String.join(",", arr));
+//
+//        String str = "%s is a good boy, he is %d years old.";
+//        System.out.println(str.formatted("Suhua", Integer.parseInt("100")));
+//
+//        System.out.println(String.format(str, "Suhua", 100));
+//
+//        Boolean b1 = Boolean.parseBoolean("true");
+//        Boolean b2 = Boolean.parseBoolean("FLASE");
+//        System.out.println(b1);
+//        System.out.println(b2);
+//
+//        System.out.println(Integer.getInteger("java.version"));
+//
+//        char[] arr2 = "Hello".toCharArray();
+//        String str2 = new String(arr2);
+//        System.out.println(arr2);
+//        System.out.println(str2);
 
-        String str = "%s is a good boy, he is %d years old.";
-        System.out.println(str.formatted("Suhua", Integer.parseInt("100")));
-
-        System.out.println(String.format(str, "Suhua", 100));
-
-        Boolean b1 = Boolean.parseBoolean("true");
-        Boolean b2 = Boolean.parseBoolean("FLASE");
-        System.out.println(b1);
-        System.out.println(b2);
-
-        System.out.println(Integer.getInteger("java.version"));
-
-        char[] arr2 = "Hello".toCharArray();
-        String str2 = new String(arr2);
-        System.out.println(arr2);
-        System.out.println(str2);
+//        String s = "";
+//        for (int i = 0; i < 100; i++) {
+//            s = s + "," + i;
+//        }
+//        System.out.println(s);
+//
+//        StringBuilder sb = new StringBuilder(1024);
+//        for (int i = 0; i < 100; i++) {
+//            sb.append(",");
+//            sb.append(i);
+//        }
+//        System.out.println(sb.toString());
     }
 }
