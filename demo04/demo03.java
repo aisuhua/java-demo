@@ -12,12 +12,24 @@ public class demo03 {
 //            System.out.println(arr[i]);
 //        }
 
-        String arr[] = {"A", "B", "C"};
+        String[] arr = {"A", "B", "C"};
         System.out.println(String.join(",", arr));
 
         String str = "%s is a good boy, he is %d years old.";
         System.out.println(str.formatted("Suhua", Integer.parseInt("100")));
 
         System.out.println(String.format(str, "Suhua", 100));
+
+        Boolean b1 = Boolean.parseBoolean("true");
+        Boolean b2 = Boolean.parseBoolean("FLASE");
+        System.out.println(b1);
+        System.out.println(b2);
+
+        System.out.println(Integer.getInteger("java.version"));
+
+        char[] arr2 = "Hello".toCharArray();
+        String str2 = new String(arr2);
+        System.out.println(arr2);
+        System.out.println(str2);
     }
 }
