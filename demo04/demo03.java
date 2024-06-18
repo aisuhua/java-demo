@@ -74,5 +74,7 @@ public class demo03 {
         }
         System.out.println(str2.toString());
 
+        System.out.println("Hello " + String.join(",", arr) + " !");
+
     }
 }
