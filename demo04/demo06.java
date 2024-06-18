@@ -10,10 +10,13 @@ public class demo03 {
             System.out.println("today is not very well");
         }
 
-        int i = 100;
-        if (i == Weekday.SUN) {
+//        int i = 100;
+//        if (i == Weekday.SUN) {
+//
+//        }
 
-        }
+        System.out.println(day.name());
+        System.out.println(Weekday.ordinal());
     }
 }
 
