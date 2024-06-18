@@ -44,5 +44,14 @@ public class demo03 {
 //            sb.append(i);
 //        }
 //        System.out.println(sb.toString());
+
+        StringBuilder sb = new StringBuilder(1024);
+        sb.append("is ")
+                .append("a ")
+                .append("good ")
+                .append("boy. ")
+                .insert(0, "Suhua ");
+        System.out.println(sb.toString());
+
     }
 }
