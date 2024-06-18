@@ -1,3 +1,5 @@
+import java.util.StringJoiner;
+
 public class demo03 {
     public static void main(String[] args) {
 //        String str = "suhua is a good boy.";
@@ -45,13 +47,32 @@ public class demo03 {
 //        }
 //        System.out.println(sb.toString());
 
-        StringBuilder sb = new StringBuilder(1024);
-        sb.append("is ")
-                .append("a ")
-                .append("good ")
-                .append("boy. ")
-                .insert(0, "Suhua ");
-        System.out.println(sb.toString());
+//        StringBuilder sb = new StringBuilder(1024);
+//        sb.append("is ")
+//                .append("a ")
+//                .append("good ")
+//                .append("boy. ")
+//                .insert(0, "Suhua ");
+//        System.out.println(sb.toString());
+
+        String[] arr = {"Baidu", "Google", "Youtube"};
+        var str = new StringBuilder();
+        str.append("Hello ");
+
+        for (String s : arr) {
+            str.append(s);
+            str.append(",");
+        }
+
+        str.delete(str.length() - 1, str.length());
+        str.append(" !");
+        System.out.println(str);
+
+        var str2 = new StringJoiner(",", "Hello ", " !");
+        for (String s : arr) {
+            str2.add(s);
+        }
+        System.out.println(str2.toString());
 
     }
 }
