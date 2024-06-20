@@ -1,9 +1,9 @@
 
 public class demo03 {
     public static void main(String[] args) {
-        int day = Weekday.FRI.dayValue;
-
-        System.out.println(day);
+        Point p = new Point(100, 200);
+        System.out.println(p.x());
+        System.out.println(p.y());
     }
 }
 
@@ -16,11 +16,11 @@ final class Point {
         this.y = y;
     }
 
-    public int getX() {
+    public int x() {
         return this.x;
     }
 
-    public int getY() {
+    public int y() {
         return this.y;
     }
 }
