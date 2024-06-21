@@ -10,15 +10,21 @@ public class demo {
 }
 
 class A {
-    protected final Log log = LogFactory.getLog(getClass());
+    protected final Log log = LogFactory.getLog(this.getClass());
 }
 
 class B extends A {
     public void print() {
         this.log.info("suhua");
+        this.log.error("error: ", new Exception("ok?"));
     }
 
     public void add() {
-        this.print();
+        print();
+        bbb();
+    }
+
+    public static void bbb() {
+        System.out.println("bbb");
     }
 }
