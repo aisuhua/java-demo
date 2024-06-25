@@ -9,6 +9,15 @@ class demo01 {
             Class cls = Integer.class;
             Class n = cls.getSuperclass();
             System.out.println(n);
+            Class n2 = n.getSuperclass();
+            System.out.println(n2);
+            Class n3 = n2.getSuperclass();
+            System.out.println(n3);
+
+            Class[] cs = cls.getInterfaces();
+            for (Class c : cs) {
+                System.out.println(c);
+            }
         } catch (Exception e) {
             System.out.println(e.getStackTrace());
         }
