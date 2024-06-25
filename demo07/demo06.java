@@ -1,5 +1,6 @@
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
+import java.lang.reflect.Method;
 
 class demo01 {
     public static void main(String[] args) throws IllegalAccessException, NoSuchFieldException, NoSuchMethodException {
@@ -9,7 +10,15 @@ class demo01 {
         System.out.println(stdClass.getDeclaredMethod("getGrade", int.class));
 
 
-        stdClass.getMethod("getScore", String.class).getName();
+
+        Method method = stdClass.getMethod("getScore", String.class);
+        System.out.println(method.getName());
+        System.out.println(method.getReturnType());
+        System.out.println(method.getParameterTypes());
+
+        for (Class cls: method.getParameterTypes()) {
+            System.out.println(cls.getName());
+        }
 
     }
 }
