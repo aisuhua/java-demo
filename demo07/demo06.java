@@ -7,6 +7,10 @@ class demo01 {
         System.out.println(stdClass.getMethod("getScore", String.class));
         System.out.println(stdClass.getMethod("getName"));
         System.out.println(stdClass.getDeclaredMethod("getGrade", int.class));
+
+
+        stdClass.getMethod("getScore", String.class).getName();
+
     }
 }
 
