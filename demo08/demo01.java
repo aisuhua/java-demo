@@ -4,10 +4,19 @@ public class demo {
     }
 }
 
-class Person {
-    @Check(min=0, max=100, value=55)
+class Me {
+    public void getAge() {
+
+    }
+}
+
+
+class Person extends Me {
+    //@Check(min=0, max=100, value=55)
+    @Check
     public int age;
 
+    @Override
     public void getAge() {
 
     }
