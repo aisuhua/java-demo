@@ -15,9 +15,18 @@ class Person {
 
     public void check() {
         for (Field field : this.getClass().getFields()) {
-            
-            if (field.getType() == String.class) {
+            Range range = field.getAnnotation(Range.class);
+            if (range == null) {
+                continue;
+            }
 
+            if (field.getType() != String.class) {
+                continue;
+            }
+
+            Object value = field.get(this);
+            if (value instanceof String) {
+                
             }
         }
     }
