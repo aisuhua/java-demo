@@ -1,10 +1,21 @@
 import java.lang.reflect.Field;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import java.lang.annotation.Retention;
 
 public class demo {
     public static void main(String[] args) throws IllegalArgumentException, IllegalAccessException {
-        Person person = new Person("suhuasdfsfsfdsfsuhuasdfsfsfdsf", "abc");
+        Person person = new Person("abc", "12");
         person.check();
     }
+}
+
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.FIELD)
+public @interface Range {
+    int min() default 0;
+    int max() default 255;
 }
 
 class Person {
@@ -20,6 +31,7 @@ class Person {
 
     public void check() throws IllegalArgumentException, IllegalAccessException {
         for (Field field : this.getClass().getFields()) {
+            System.out.println(field.getName());
             Range range = field.getAnnotation(Range.class);
             System.out.println(range);
 
@@ -42,9 +54,4 @@ class Person {
             }
         }
     }
-}
-
-public @interface Range {
-    int min() default 0;
-    int max() default 255;
 }
