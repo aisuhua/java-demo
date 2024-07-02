@@ -7,6 +7,8 @@ public class demo {
         list.add(1);
         list.add("2");
         list.add(new Object());
-        System.out.println(list.get(1));
+        String str = (java.lang.String) list.get(1);
+        System.out.println(list.get(1).getClass());
+        System.out.println(str.length());
     }
 }
