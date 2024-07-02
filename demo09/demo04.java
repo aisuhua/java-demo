@@ -10,22 +10,38 @@ public class demo {
         System.out.println(arr.toString());
 
         Person[] persons = new Person[] {
-                new Person("a", 2),
+                new Person("a", 10),
                 new Person("c", 3),
                 new Person("b", 4),
         };
 
         Arrays.sort(persons);
-        System.out.println(Arrays.toString(persons));
+        for (Person person : persons) {
+            System.out.println(person.name);
+        }
     }
 }
 
-class Person {
+class Person implements Comparable<Person> {
     public String name;
     public int age;
 
     public Person(String name, int age) {
         this.name = name;
         this.age = age;
+    }
+
+//    public int compareTo(Person person) {
+//        return this.name.compareTo(person.name);
+//    }
+
+    public int compareTo(Person o) {
+        if (this.age > o.age) {
+            return 1;
+        } else if (this.age < o.age) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
 }
