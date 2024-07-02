@@ -17,7 +17,7 @@ public class demo {
 
         Arrays.sort(persons);
         for (Person person : persons) {
-            System.out.println(person.name);
+            System.out.println(person);
         }
     }
 }
@@ -43,5 +43,9 @@ class Person implements Comparable<Person> {
         } else {
             return 0;
         }
+    }
+
+    public String toString() {
+        return this.name + ", " + this.age;
     }
 }
