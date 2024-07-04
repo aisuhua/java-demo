@@ -4,21 +4,17 @@ import java.util.Arrays;
 
 public class demo {
     public static void main(String[] args) {
-        Pair<String> p = new Pair<String>("aa", "bb");
+        Pair<String, Integer> p = new Pair<>("aa", 100);
         System.out.println(p.getFirst());
         System.out.println(p.getLast());
-
-        Pair<Integer> p2 = new Pair<Integer>(100, 200);
-        System.out.println(p2.getFirst());
-        System.out.println(p2.getLast());
     }
 }
 
-class Pair<T> {
+class Pair<T, K> {
     private T first;
-    private T last;
+    private K last;
 
-    public Pair(T first, T last) {
+    public Pair(T first, K last) {
         this.first = first;
         this.last = last;
     }
@@ -27,7 +23,7 @@ class Pair<T> {
         return this.first;
     }
 
-    public T getLast() {
+    public K getLast() {
         return this.last;
     }
 }
